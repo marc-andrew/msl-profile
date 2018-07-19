@@ -1,0 +1,35 @@
+/**
+ Search
+**/
+
+.search {
+    $searchParent: &;
+
+    @at-root #{&}--header {
+        position: absolute;
+        background-color: $purple;
+        width: 100%;
+        height: calc(100% - 10px);
+        top: 0;
+        left: 0;
+
+        @include media(screen,min,769px) {
+            background-color: transparent;
+            width: auto;
+            height: 100%;
+            right: 0;
+            left: auto;
+        }
+
+        &.open {
+            width: 100%;
+        }
+    }
+
+    @at-root #{&}--header-active {
+
+        @include media(screen,min,769px) {
+            width: 100%;
+        }
+    }
+}

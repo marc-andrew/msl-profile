@@ -1,0 +1,20 @@
+{
+    "items": [
+        {
+            "url": "img/placeholder/carousel.jpg",
+            "title": "Image title 1"
+        },
+        {
+            "url": "img/placeholder/carousel-2.jpg",
+            "title": "Image title 2"
+        },
+        {
+            "url": "img/placeholder/carousel-3.jpg",
+            "title": "Image title 3"
+        },
+        {
+            "url": "img/placeholder/carousel-4.jpg",
+            "title": "Image title 4"
+        }
+    ]  
+}

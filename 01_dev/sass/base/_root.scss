@@ -1,0 +1,27 @@
+/**
+ Base Root styles
+**/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: $font-1;
+	font-size: 62.5%;
+	color: $dark-grey;
+	height: 100%;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}

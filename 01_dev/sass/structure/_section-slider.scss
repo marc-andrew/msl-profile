@@ -1,0 +1,102 @@
+/**
+ Section Slider
+**/
+
+.container--slider {
+    margin-bottom: px(180);
+
+    @include media(screen,min,901px) {
+        margin-bottom: px(110);
+    }
+
+    .carousel-wrapper {
+        position: relative;
+        margin-bottom: px(20);
+    }
+
+    .carousel {
+        position: relative;
+
+        li {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+
+            &.active {
+                position: relative;
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+    }
+
+    .btn--prev,
+    .btn--next {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    .btn--prev {
+        left: 0;
+    }
+
+    .btn--next {
+        right: 0;
+    }
+
+    .carousel-pagination {
+        margin-bottom: px(15);
+
+        @include media(screen,min,901px) {
+            margin-bottom: px(55);
+        }
+
+        li {
+            position: relative;
+            padding-right: px(20);
+
+            &:after {
+                position: absolute;
+                content: '';
+                background-color: $grey;
+                width: 0;
+                height: px(1);
+                margin: auto 0;
+                top: 0;
+                right: px(7);
+                bottom: 0;
+            }
+
+            &.active {
+                padding-right: px(50);
+
+                &:after {
+                    width: px(36);
+                }
+
+                .btn--pagination {
+                    border-color: $orange;
+                }
+            }
+
+            &:last-child {
+
+                &.active {
+                    padding-right: 0;
+
+                    &:after {
+                        content: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    h3 {
+        font-size: px(22);
+        line-height: px(28);
+        margin-bottom: px(19);
+    }
+}

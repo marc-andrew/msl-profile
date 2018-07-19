@@ -1,0 +1,41 @@
+/**
+ Section Video
+**/
+
+.container--video {
+    margin-bottom: px(100);
+
+    @include media(screen,min,901px) {
+        margin-bottom: px(115);
+    }
+
+    .video-intro {
+        position: relative;
+        margin-bottom: px(20);
+
+        @include media(screen,min,901px) {
+            width: getpercent(1238,1481);
+            margin-bottom: 0;
+        }
+
+        .btn--play {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .video-main {
+
+        @include media(screen,min,901px) {
+            
+            width: getpercent(243,1481);
+            padding-left: px(20);
+
+            .copy {
+                border-top: px(1) solid $dark-grey;
+                padding-top: px(10);
+            }
+        }
+    }
+}

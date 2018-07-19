@@ -1,0 +1,41 @@
+/**
+ Form
+**/
+
+.form {
+
+	@at-root #{&}--search {
+		display: none;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		padding: px(17) px(120) 0 px(85);
+
+		@include media(screen,min,769px) {
+			padding: px(26) px(120) 0 px(20);
+		}
+    }
+    
+    @at-root #{&}--search-open {
+        display: block;
+    }
+
+	@at-root #{&}__input-search {
+		background-color: #fff;
+		outline: none;
+		border: none;
+		border-radius: 0;
+		font-family: $font-2;
+		font-size: px(14);
+		line-height: px(18);
+		letter-spacing: px(0.5);
+		color: $dark-grey;
+		width: 100%;
+		height: px(30);
+		padding: px(4) px(40) px(5) px(10);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+}

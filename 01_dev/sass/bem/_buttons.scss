@@ -1,0 +1,375 @@
+/**
+ Buttons
+**/
+
+.btn {
+	position: relative;
+	display: inline-block;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	font-family: $font-2;
+	font-weight: normal;
+	font-size: px(14);
+	line-height: px(20);
+	letter-spacing: px(0.25);
+	text-decoration: none;
+	padding: 0;
+	cursor: pointer;
+
+	$btnParent: &;
+
+	@at-root #{&}__search-icon {
+		position: absolute;
+		display: block;
+		width: px(26);
+		height: px(27);
+		top: px(22);
+		right: px(26);
+
+		@include media(screen,min,769px) {
+			top: px(33);
+		}
+	}
+
+	@at-root #{&}__burger-icon {
+		position: absolute;
+		display: block;
+		border: px(1) solid #fff;
+		border-right: none;
+		border-left: none;
+		text-indent: -99999px;
+		width: px(21);
+		height: px(15);
+		top: px(28);
+		right: px(31);
+
+		&:before {
+			position: absolute;
+			display: block;
+			background-color: #fff;
+			content: '';
+			width: 100%;
+			height: px(1);
+			top: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto 0;
+		}
+	}
+
+	@at-root #{&}__submit-icon {
+		position: absolute;
+		display: block;
+		border: px(1) solid $dark-grey;
+		border-bottom: none;
+		border-left: none;
+		text-indent: -99999px;
+		width: px(12);
+		height: px(12);
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg); 
+		transform: rotate(45deg);
+		top: px(9);
+		left: px(5);
+	}
+
+	@at-root #{&}__play-icon {
+		position: absolute;
+		display: block;
+		width: px(22);
+		height: px(33);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+
+	@at-root #{&}__prev-icon {
+		position: absolute;
+		display: block;
+		border: px(2) solid $orange;
+		border-right: none;
+		border-bottom: none;
+		text-indent: -99999px;
+		width: px(20);
+		height: px(20);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: px(4);
+		margin: auto;
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg); 
+		transform: rotate(-45deg);
+	}
+
+	@at-root #{&}__next-icon {
+		position: absolute;
+		display: block;
+		border: px(2) solid $orange;
+		border-bottom: none;
+		border-left: none;
+		text-indent: -99999px;
+		width: px(20);
+		height: px(20);
+		top: 0;
+		right: px(4);
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg); 
+		transform: rotate(45deg);
+	}
+
+
+	@at-root #{&}--ghost {
+		border: px(1) solid $dark-grey;
+		border-right: none;
+		text-transform: uppercase;
+		text-align: center;
+		height: px(50);
+		padding: px(15) px(50) 0;
+
+		&:after {
+			position: absolute;
+			content: '';
+			border: px(1) solid $dark-grey;
+			border-left: none;
+			border-bottom: none;
+			width: px(20);
+			height: 100%;
+			top: px(-1);
+			right: px(-9);
+			-ms-transform: skewX(-20deg);
+			-webkit-transform: skewX(-20deg);
+			transform: skewX(-20deg);
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			border-color: $orange;
+			color: $orange;
+
+			&:after {
+				border-color: $orange;
+			}
+		}
+	}
+
+	@at-root #{&}--search {
+		position: absolute;
+		width: px(75);
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		z-index: 1;
+
+		&:hover,
+		&:focus {
+			background-color: $magenta;
+		}
+
+		@include media(screen,min,769px) {
+			width: px(110);
+			right: 0;
+			left: auto;
+
+			&:before {
+				position: absolute;
+				background-color: $dark-purple;
+				display: block;
+				content: '';
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: px(17);
+				-ms-transform: skewX(-20deg);
+				-webkit-transform: skewX(-20deg);
+				transform: skewX(-20deg);
+			}
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+
+				&:before {
+					background-color: $magenta;
+				}
+			}
+		}
+	}
+
+	@at-root #{&}--search-close {
+
+		#{$btnParent}__search-icon {
+			&:before,
+			&:after {
+				position: absolute;
+				display: block;
+				background-color: #fff;
+				content: '';
+				width: px(1);
+				height: px(24);
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+			}
+
+			&:before {
+				-ms-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg); 
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				-ms-transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg); 
+				transform: rotate(-45deg);
+			}
+
+			.icon {
+				display: none;
+			}
+		}
+	}
+
+	@at-root #{&}--burger {
+		width: px(110);
+		height: 100%;
+		overflow: hidden;
+		
+		&:before {
+			position: absolute;
+			background-color: $dark-purple;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: px(15);
+			-ms-transform: skewX(-20deg);
+			-webkit-transform: skewX(-20deg);
+			transform: skewX(-20deg);
+		}
+
+		&:hover,
+		&:focus {
+
+			&:before {
+				background-color: $magenta;
+			}
+		}
+	}
+
+	@at-root #{&}--burger-close {
+
+		#{$btnParent}__burger-icon {
+			border-top: none;
+			border-bottom: none;
+			width: px(24);
+			height: px(24);
+			top: px(25);
+
+			&:before,
+			&:after {
+				position: absolute;
+				display: block;
+				background-color: #fff;
+				content: '';
+				width: px(1);
+				height: px(24);
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+			}
+
+			&:before {
+				-ms-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg); 
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				-ms-transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg); 
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	@at-root #{&}--submit {
+		position: absolute;
+		width: px(30);
+		height: px(30);
+		top: px(17);
+		right: px(120);
+
+		@include media(screen,min,769px) {
+			top: px(26);
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $magenta;
+
+			#{$btnParent}__submit-icon {
+				border-color: #fff;
+			}
+		}
+	}
+
+	@at-root #{&}--play {
+		background-color: #fff;
+		width: px(112);
+        height: px(112);
+        
+        &:hover,
+        &:focus {
+            background-color: $grey;
+        }
+	}
+
+	@at-root #{&}--prev {
+		background-color: #fff;
+		width: px(80);
+		height: px(80);
+		overflow: hidden;
+
+		&:hover,
+		&:focus {
+			background-color: $grey;
+		}
+	}
+
+	@at-root #{&}--next {
+		background-color: #fff;
+		width: px(80);
+		height: px(80);
+		overflow: hidden;
+
+		&:hover,
+		&:focus {
+			background-color: $grey;
+		}
+	}
+
+	@at-root #{&}--pagination {
+		border-bottom: px(1) solid transparent;
+		padding: px(3) 0;
+
+		&:hover,
+		&:focus {
+			border-color: $orange;
+		}
+	}
+}

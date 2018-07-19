@@ -1,0 +1,13 @@
+/**
+ Header
+**/
+
+.footer {
+    background-color: $light-grey;
+    min-height: px(140);
+    padding: px(45) px(20) px(20);
+
+    @include media(screen,min,376px) {
+        padding: px(45) px(80) px(20);
+    }
+}

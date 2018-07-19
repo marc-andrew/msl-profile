@@ -1,0 +1,30 @@
+/**
+ Images
+**/
+
+.img {
+    line-height: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .res-img {
+        opacity: 0;
+    }
+}
+
+.loaded {
+
+    .res-img {
+        opacity: 1;
+    }
+}
+
+.no-js {
+
+    .res-img {
+        display: none;
+    }
+}

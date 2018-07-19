@@ -1,0 +1,17 @@
+/**
+ Grid
+**/
+
+.grid {
+    @include media(screen,min,481px) {
+        display: grid;
+    }
+
+    @at-root #{&}--col-half {
+        grid-template-columns: 50% 50%;
+    }
+
+    @at-root #{&}--col-3 {
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+}

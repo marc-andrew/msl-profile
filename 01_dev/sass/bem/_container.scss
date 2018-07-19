@@ -1,0 +1,15 @@
+/**
+ Container
+**/
+
+.container {
+    padding: 0 px(30);
+
+    @include media(screen,min,601px) {
+        padding: 0 px(80);
+    }
+
+    @include media(screen,min,769px) {
+        padding: 0 px(115);
+    }
+}

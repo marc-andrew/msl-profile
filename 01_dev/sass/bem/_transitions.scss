@@ -1,0 +1,22 @@
+/**
+ Transition
+**/
+
+.trans {
+
+    @at-root #{&}--all {
+        -webkit-transition: all 400ms;
+        transition: all 400ms;
+
+        &:before,
+        &:after {
+            -webkit-transition: all 400ms;
+            transition: all 400ms;
+        }
+    }
+
+    @at-root #{&}--ease-in-out {
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+}

@@ -1,0 +1,24 @@
+/**
+ Header
+**/
+
+.header {
+    position: relative;
+    height: px(75);
+    padding: 0 0 px(10);
+
+    @include media(screen,min,769px) {
+        height: px(91); 
+    }
+}
+
+.mobile-trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    @include media(screen,min,769px) {
+        display: none;
+    }
+}
